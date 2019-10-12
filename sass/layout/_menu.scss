@@ -1,0 +1,59 @@
+/* Start Menu */
+.menu {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    button {
+        display: block;
+        width: 44px;
+        height: 46px;
+        background: $mainColor;
+        color: #fff;
+        text-align: center;
+        font-size: 1.1rem;
+        outline: none;
+        border: 1px solid #fff;
+        border-radius: 16px;
+        &:hover {
+            background: $secondColor;
+            // color: #fff;
+        }
+    }
+}
+/* End Menu */
+
+/* Start Options */
+.options {
+    position: fixed;
+    right: 80px;
+    bottom: 30px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            background: $mainColor;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            &:first-of-type {
+                border-top: 1px solid #fff;
+                border-top-right-radius: 16px;
+                border-top-left-radius: 16px;
+            }
+            &:last-of-type {
+                border-bottom-right-radius: 16px;
+                border-bottom-left-radius: 16px;
+            }
+            &:hover {
+                background: $secondColor;
+            }
+        }
+    }
+}
+/* End Options */

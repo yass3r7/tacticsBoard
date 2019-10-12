@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#4285f4">
+    <meta name="theme-color" content="#03a9f4">
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#4285f4">
+    <meta name="msapplication-navbutton-color" content="#03a9f4">
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#03a9f4">
     <title>Tactics Board</title>
     <!-- Fontawesome 5.11.2 -->
     <link rel="stylesheet" href="css/all.min.css">
@@ -25,13 +25,31 @@
     </div>
     <!-- End Tactic Board -->
 
-    <!-- Start Zoom Controls -->
-    <div class="zoom-controls">
-        <button onclick="zoomIn()"><i class="fa fa-search-plus"></i></button>
-        <button onclick="resetZoomLevel()"><i class="fa fa-search"></i></button>
-        <button onclick="zoomOut()"><i class="fa fa-search-minus"></i></button>
+    <!-- Start Controls -->
+    <div class="controls">
+        <!-- Start Zoom Controls -->
+        <div class="zoom-controls">
+            <button onclick="zoomIn()"><i class="fa fa-search-plus"></i></button>
+            <button onclick="resetZoomLevel()"><i class="fa fa-search"></i></button>
+            <button onclick="zoomOut()"><i class="fa fa-search-minus"></i></button>
+        </div>
+        <!-- End Zoom Controls -->
+    
+        <!-- Start Options menu -->
+        <div class="menu">
+            <button><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+        <div class="options hidden">
+            <ul>
+                <li onclick="addItem()">Add item</li>
+                <li>Lock Board</li>
+                <li>Clear Board</li>
+                <li>Save as image</li>
+            </ul>
+        </div>
+        <!-- End Options menu -->
     </div>
-    <!-- End Zoom Controls -->
+    <!-- End Controls -->
     
     <!-- Start scripts -->
     <script src="js/libraries/jquery-3.3.1.min.js"></script>

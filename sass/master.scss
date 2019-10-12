@@ -12,7 +12,7 @@ body {
     margin: 0;
     overflow: hidden;
     @include setProp(user-select, none);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -51,4 +51,6 @@ ul, ol {
 }
 /* End Tactics Board */
 
-@import "layout/zoomControls"
+// import layout components
+@import "layout/zoomControls"; // zoom controls
+@import "layout/menu"; // menu
