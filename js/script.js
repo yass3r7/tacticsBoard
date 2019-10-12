@@ -16,5 +16,9 @@ $(function () {
         $(".add-item-menu").slideDown();
     });
 
+    // add a specific item
+    $(".add-item-menu ul li").click(function () {
+        console.log($(this).data('item'));
+    });
     
 });

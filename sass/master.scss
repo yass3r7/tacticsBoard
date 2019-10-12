@@ -24,6 +24,17 @@ ul, ol {
     list-style: none;
 }
 
+%mp0 {
+    margin: 0;
+    padding: 0;
+}
+
+@for $i from 1 through 5 {
+    h#{$i} {
+        @extend %mp0;
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -54,3 +65,16 @@ ul, ol {
 // import layout components
 @import "layout/zoomControls"; // zoom controls
 @import "layout/menu"; // menu
+
+/* Start custom components */
+.add-settings {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @import "layout/alert";
+}
+/* End custom components */

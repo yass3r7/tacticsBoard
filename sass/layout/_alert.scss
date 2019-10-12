@@ -1,0 +1,52 @@
+/* Start alert box */
+.alert {
+    width: 300px;
+    padding: 15px 20px;
+    background: #fff;
+    position: fixed;
+    top: 30%;
+    left: calc(100vw / 2 - 150px);
+    border-radius: 16px;
+    border: 1px solid $mainColor;
+
+    @media (max-width: 767.98px) {
+        width: 90%;
+        left: calc(100vw / 2 - 45%);
+    }
+
+    .alert-title {
+        color: $mainColor;
+    }
+
+    .alert-body {
+        color: #666;
+    }
+
+    hr {
+        outline: none;
+        border: none;
+        border-top: 1px solid $mainColor;
+        margin: 4px 0;
+    }
+
+    button {
+        padding: 8px 16px;
+        color: $mainColor;
+        text-align: center;
+        border-radius: 6px;
+        outline: none;
+
+        &.alert-btn-primary {
+            background-color: $mainColor;
+            color: #fff;
+            border: 1px solid $mainColor;
+        }
+
+        &.alert-btn-danger {
+            background-color: #dc3545;
+            color: #fff;
+            border: 1px solid #dc3545;
+        }
+    }
+}
+/* End alert box */
