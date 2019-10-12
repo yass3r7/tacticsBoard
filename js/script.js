@@ -7,10 +7,14 @@ $(function () {
     // options menu
     $(".menu").click(function () {
         $(".options").slideToggle();
+        $(".add-item-menu").hide();
     })
 
     // option addItem()
-    // function addItem() {
+    $("#addItem").click(function () {
+        $(".options").fadeOut("fast");
+        $(".add-item-menu").slideDown();
+    });
 
-    // }
+    
 });

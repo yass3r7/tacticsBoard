@@ -24,7 +24,8 @@
 /* End Menu */
 
 /* Start Options */
-.options {
+.options,
+.add-item-menu {
     position: fixed;
     right: 80px;
     bottom: 30px;
@@ -34,10 +35,14 @@
         padding: 0;
 
         li {
+            min-width: 180px;
             background: $mainColor;
             color: #fff;
-            text-align: center;
-            padding: 10px 20px;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 15px 10px;
             border-bottom: 1px solid #fff;
             border-right: 1px solid #fff;
             border-left: 1px solid #fff;
@@ -53,7 +58,20 @@
             &:hover {
                 background: $secondColor;
             }
+
+            i {
+                font-size: 1.6rem;
+                margin: 0 4px;
+            }
         }
     }
 }
 /* End Options */
+
+/* Start Add Item Menu */
+// .add-item-menu {
+//     position: fixed;
+//     right: 80px;
+//     bottom: 30px;
+// }
+/* End Add Item Menu */
