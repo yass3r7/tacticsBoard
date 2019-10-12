@@ -20,6 +20,16 @@
 
     .alert-body {
         color: #666;
+
+        .alert-input {
+            display: inline-block;
+            width: 100%;
+            padding: 5px 10px;
+            margin: 8px 0;
+            border: 1px solid $mainColor;
+            outline: none;
+            border-radius: 4px;
+        }
     }
 
     hr {
