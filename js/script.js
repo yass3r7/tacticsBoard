@@ -1,4 +1,6 @@
 let clickedItem;
+let itemName;
+let num = 0;
 
 $(function () {
     // controls hide/show on double click on the board
@@ -26,6 +28,8 @@ $(function () {
     $(".add-item-menu ul li").click(function () {
         // console.log($(this).data('item'));
         $(".add-settings").show("slow");
+
+        itemName = $(this).data('item');
     });
 
     // component settings
@@ -72,12 +76,21 @@ $(function () {
 
 // confirm adding item
 function confirmAdding() {
-    let num = howMany.value;
+    let how_many = howMany.value;
 
-    if (num < 1 || num > 100) {
-        alert("PLease, choose a number between 1 and 100");
+    if (how_many < 1 || how_many > 10) {
+        alert("PLease, choose a number between 1 and 10"); // between 1 and 10
         return false;
     }
+
+    for (i = 1; i <= how_many; i++) {
+        let cloned = $(".provider .component." + itemName).clone(true);
+
+        cloned.attr("id", "c" + (i + num));
+        cloned.appendTo($("#board"));
+    }
+
+    num = +how_many + num;
 
     $(".add-settings").hide("slow");
     $(".add-item-menu").slideUp();
@@ -142,12 +155,12 @@ function removeItem() {
 let move = false;
 function moveItem() {
     $(".item-options").hide();
+    $(".for-moving").show("fast");
     move = true;
 }
 
-$(".board").dblclick(function (e) {
+$(".for-moving").dblclick(function (e) {
     if (move) {
-        
         let x = e.offsetX,
             y = e.offsetY;
 
@@ -162,6 +175,7 @@ $(".board").dblclick(function (e) {
             top: ((y * 100) / h) - ((clickedItem[0].offsetHeight / 2 * 100) / w) + "%"
         }, 500);
 
+        $(".for-moving").hide("fast");
         move = false;
     }
 });
