@@ -20,7 +20,17 @@
     <!-- Start Tactic Board -->
     <div class="container">
         <div id="board" class="board">
-            <div class="component square" data-name="square" data-type="vec"></div>
+                <div class="component square" data-name="square" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
+                <div class="component circle" data-name="circle" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
+                <div class="component tree" data-name="tree" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                    <img src="files/components/tree.png" alt="tree">
+                </div>
+                <div class="component mountain" data-name="mountain" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                    <img src="files/components/mountain.png" alt="mountain">
+                </div>
+                <div class="component mountains" data-name="mountains" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                    <img src="files/components/mountains.png" alt="mountains">
+                </div>
         </div>
     </div>
     <!-- End Tactic Board -->
@@ -83,8 +93,8 @@
         <!-- Start Item options -->
         <div class="item-options">
             <ul>
-                <li><i class="fa fa-arrows-alt"></i> Move item</li>
-                <li><i class="fa fa-trash-alt"></i> Remove item</li>
+                <li onclick="moveItem()"><i class="fa fa-arrows-alt"></i> Move item</li>
+                <li onclick="removeItem()"><i class="fa fa-trash-alt"></i> Remove item</li>
                 <li id="itemProp"><i class="fa fa-tasks"></i> Properties</li>
             </ul>
         </div>
@@ -161,7 +171,17 @@
 
     <!-- Start Components Provider -->
     <div class="provider hidden">
-        <div class="component square" data-name="square" data-type="vec" id="" data-layer="1" data-color="c1" data-width="10" data-height="10"></div>
+        <div class="component square" data-name="square" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
+        <div class="component circle" data-name="circle" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
+        <div class="component tree" data-name="tree" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+            <img src="files/components/tree.png" alt="tree">
+        </div>
+        <div class="component mountain" data-name="mountain" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+            <img src="files/components/mountain.png" alt="mountain">
+        </div>
+        <div class="component mountains" data-name="mountains" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+            <img src="files/components/mountains.png" alt="mountains">
+        </div>
     </div>
     <!-- End Components Provider -->
     
@@ -169,6 +189,7 @@
     <script src="js/libraries/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/zoomControl.js"></script>
+    <script src="js/itemOptions.js"></script>
     <!-- End scripts -->
 </body>
 </html>

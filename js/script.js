@@ -1,3 +1,5 @@
+let clickedItem;
+
 $(function () {
     // controls hide/show on double click on the board
     $("#board").dblclick(function (e) {
@@ -28,22 +30,23 @@ $(function () {
 
     // component settings
     $(".component").dblclick(function () {
-        item = $(this).data("name");
-        item_id = $(this).attr("id");
-        
-        if ($(this).data("type") == "vec") {
-            $(".controls").fadeIn();
-            $(".item-options").slideUp("fast");
-            $(".item-options").slideDown();
-        } else if ($(this).data("type") == "img") {
-            console.log("image");
-        }
+        clickedItem = $(this);
+
+        $(".controls").fadeIn();
+        $(".item-options").slideUp("fast");
+        $(".item-options").slideDown();
     });
 
     $("#itemProp").click(function () {
-        $(".item-options").hide();
-        $(".item-settings").show("slow");
-        $(".vec-item-settings").removeClass("hidden");
+        if (clickedItem.data("type") == "vec") {
+            $(".item-options").hide();
+            $(".item-settings").show("slow");
+            $(".vec-item-settings").removeClass("hidden");
+        } else if (clickedItem.data("type") == "img") {
+            $(".item-options").hide();
+            $(".item-settings").show("slow");
+            $(".img-item-settings").removeClass("hidden");
+        }
     });
 });
 
@@ -69,10 +72,19 @@ function cancelAdding() {
 function confirmChanges() {
     $(".item-settings").hide("slow");
     $(".vec-item-settings").addClass("hidden");
+    $(".img-item-settings").addClass("hidden");
 }
 
 // cancel changes
 function cancelChanges() {
     $(".item-settings").hide("slow");
     $(".vec-item-settings").addClass("hidden");
+    $(".img-item-settings").addClass("hidden");
 }
+
+// remove item
+function removeItem() {
+    $(".item-options").hide();
+    clickedItem.remove();
+}
+
