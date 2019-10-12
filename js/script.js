@@ -88,3 +88,30 @@ function removeItem() {
     clickedItem.remove();
 }
 
+// move item
+let move = false;
+function moveItem() {
+    $(".item-options").hide();
+    move = true;
+}
+
+$(".board").dblclick(function (e) {
+    if (move) {
+        
+        let x = e.offsetX,
+            y = e.offsetY;
+
+        let w = $(".board")[0].clientWidth, // 100% 
+            h = $(".board")[0].clientHeight;// 100%
+
+            console.log(x, y);
+            console.log(w, h);
+
+        clickedItem.animate({
+            left: ((x * 100) / w) - ((clickedItem[0].offsetWidth / 2 * 100) / w) + "%",
+            top: ((y * 100) / h) - ((clickedItem[0].offsetHeight / 2 * 100) / w) + "%"
+        }, 500);
+
+        move = false;
+    }
+});
