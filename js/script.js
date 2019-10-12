@@ -42,6 +42,8 @@ $(function () {
             $(".item-options").hide();
             $(".item-settings").show("slow");
             $(".vec-item-settings").removeClass("hidden");
+
+            // let i_layer = 
         } else if (clickedItem.data("type") == "img") {
             $(".item-options").hide();
             $(".item-settings").show("slow");
@@ -80,6 +82,8 @@ function cancelChanges() {
     $(".item-settings").hide("slow");
     $(".vec-item-settings").addClass("hidden");
     $(".img-item-settings").addClass("hidden");
+
+    clickedItem = null;
 }
 
 // remove item
