@@ -38,16 +38,32 @@ $(function () {
     });
 
     $("#itemProp").click(function () {
+        let i_layer = clickedItem.data("layer"),
+            i_color = clickedItem.data("color"),
+            i_width = clickedItem.data("width"),
+            i_height = clickedItem.data("height"),
+            i_rotate = clickedItem.data("rotate");
+
         if (clickedItem.data("type") == "vec") {
             $(".item-options").hide();
             $(".item-settings").show("slow");
             $(".vec-item-settings").removeClass("hidden");
 
-            // let i_layer = 
+            n_1_layer.value = i_layer;
+            n_1_width.value = i_width;
+            n_1_height.value = i_height;
+            n_1_rotate.value = i_rotate;
+            n_1_color.value = i_color;
+
         } else if (clickedItem.data("type") == "img") {
             $(".item-options").hide();
             $(".item-settings").show("slow");
             $(".img-item-settings").removeClass("hidden");
+
+            n_2_layer.value = i_layer;
+            n_2_width.value = i_width;
+            n_2_height.value = i_height;
+            n_2_rotate.value = i_rotate;
         }
     });
 });

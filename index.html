@@ -20,15 +20,15 @@
     <!-- Start Tactic Board -->
     <div class="container">
         <div id="board" class="board">
-                <div class="component square" data-name="square" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
-                <div class="component circle" data-name="circle" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
-                <div class="component tree" data-name="tree" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                <div class="component square" data-name="square" data-type="vec" id="c1" data-layer="1" data-color="c1" data-width="10" data-height="10" data-rotate="0"></div>
+                <div class="component circle" data-name="circle" data-type="vec" id="c2" data-layer="2" data-color="c2" data-width="10" data-height="10" data-rotate="0"></div>
+                <div class="component tree" data-name="tree" data-type="img" id="c3" data-layer="3" data-width="3" data-height="5" data-rotate="0">
                     <img src="files/components/tree.png" alt="tree">
                 </div>
-                <div class="component mountain" data-name="mountain" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                <div class="component mountain" data-name="mountain" data-type="img" id="c4" data-layer="4" data-width="30" data-height="20" data-rotate="0">
                     <img src="files/components/mountain.png" alt="mountain">
                 </div>
-                <div class="component mountains" data-name="mountains" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+                <div class="component mountains" data-name="mountains" data-type="img" id="c5" data-layer="5" data-width="60" data-height="20" data-rotate="0">
                     <img src="files/components/mountains.png" alt="mountains">
                 </div>
         </div>
@@ -110,29 +110,29 @@
                     <div class="alert-body">
                         <div class="group">
                             <label for="item-color">Layer:</label>
-                            <input type="number" value="0" min="0" max="100" id="n_layer">
+                            <input type="number" value="0" min="0" max="100" id="n_1_layer">
                         </div>
                         <div class="group">
                             <label for="item-color">Color:</label>
-                            <select id="">
+                            <select id="n_1_color">
                                 <option value="c1">1st Color</option>
                                 <option value="c2">2nd Color</option>
                                 <option value="c3">Custom Color</option>
                             </select>
                             <span id="colorValue"></span>
-                            <input type="color" name="color" id="n_color" disabled>
+                            <input type="color" name="color">
                         </div>
                         <div class="group">
                             <label for="item-color">Width (%):</label>
-                            <input type="number" value="10" min="2" max="100" id="n_width"><span></span> (2% ~ 100%)</span>
+                            <input type="number" value="10" min="2" max="100" id="n_1_width"><span></span> (2% ~ 100%)</span>
                         </div>
                         <div class="group">
                             <label for="item-color">Height (%):</label>
-                            <input type="number" value="10" min="2" max="100" id="n_height"><span> (2% ~ 100%)</span>
+                            <input type="number" value="10" min="2" max="100" id="n_1_height"><span> (2% ~ 100%)</span>
                         </div>
                         <div class="group">
                             <label for="item-color">Rotate (deg):</label>
-                            <input type="number" value="10" min="-360" max="360" step="5" id="n_height"><span> (-360 ~ 360)</span>
+                            <input type="number" value="10" min="-360" max="360" step="5" id="n_1_rotate"><span> (-360 ~ 360)</span>
                         </div>
                     </div>
                     <hr>
@@ -150,19 +150,19 @@
                     <div class="alert-body">
                         <div class="group">
                             <label for="item-color">Layer:</label>
-                            <input type="number" value="0" min="0" max="1000" id="">
+                            <input type="number" value="0" min="0" max="1000" id="n_2_layer">
                         </div>
                         <div class="group">
                             <label for="item-color">Width (%):</label>
-                            <input type="number" value="10" min="2" max="100" id=""><span></span> (2% ~ 100%)</span>
+                            <input type="number" value="10" min="2" max="100" id="n_2_width"><span></span> (2% ~ 100%)</span>
                         </div>
                         <div class="group">
                             <label for="item-color">Height (%):</label>
-                            <input type="number" value="10" min="2" max="100" id=""><span> (2% ~ 100%)</span>
+                            <input type="number" value="10" min="2" max="100" id="n_2_height"><span> (2% ~ 100%)</span>
                         </div>
                         <div class="group">
                             <label for="item-color">Rotate (deg):</label>
-                            <input type="number" value="10" min="-360" max="360" step="5" id="n_height"><span> (-360 ~ 360)</span>
+                            <input type="number" value="10" min="-360" max="360" step="5" id="n_2_rotate"><span> (-360 ~ 360)</span>
                         </div>
                     </div>
                     <hr>
@@ -179,15 +179,15 @@
 
     <!-- Start Components Provider -->
     <div class="provider hidden">
-        <div class="component square" data-name="square" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
-        <div class="component circle" data-name="circle" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height=""></div>
-        <div class="component tree" data-name="tree" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+        <div class="component square" data-name="square" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height="" data-rotate=""></div>
+        <div class="component circle" data-name="circle" data-type="vec" id="" data-layer="" data-color="" data-width="" data-height="" data-rotate=""></div>
+        <div class="component tree" data-name="tree" data-type="img" id="" data-layer="" data-width="" data-height="" data-rotate="">
             <img src="files/components/tree.png" alt="tree">
         </div>
-        <div class="component mountain" data-name="mountain" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+        <div class="component mountain" data-name="mountain" data-type="img" id="" data-layer="" data-width="" data-height="" data-rotate="">
             <img src="files/components/mountain.png" alt="mountain">
         </div>
-        <div class="component mountains" data-name="mountains" data-type="img" id="" data-layer="" data-color="" data-width="" data-height="">
+        <div class="component mountains" data-name="mountains" data-type="img" id="" data-layer="" data-width="" data-height="" data-rotate="">
             <img src="files/components/mountains.png" alt="mountains">
         </div>
     </div>
