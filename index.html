@@ -11,7 +11,8 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
     <title>Tactics Board</title>
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <!-- Fontawesome 5.11.2 -->
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/master.css">
 </head>
@@ -19,14 +20,23 @@
     <!-- Start Tactic Board -->
     <div class="container">
         <div id="board" class="board">
-            
+
         </div>
     </div>
     <!-- End Tactic Board -->
+
+    <!-- Start Zoom Controls -->
+    <div class="zoom-controls">
+        <button onclick="zoomIn()"><i class="fa fa-search-plus"></i></button>
+        <button onclick="resetZoomLevel()"><i class="fa fa-search"></i></button>
+        <button onclick="zoomOut()"><i class="fa fa-search-minus"></i></button>
+    </div>
+    <!-- End Zoom Controls -->
     
     <!-- Start scripts -->
     <script src="js/libraries/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/zoomControl.js"></script>
     <!-- End scripts -->
 </body>
 </html>

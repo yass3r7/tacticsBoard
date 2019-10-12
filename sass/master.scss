@@ -35,14 +35,20 @@ ul, ol {
     width: 100vw;
     height: 100vh;
     overflow: scroll;
-}
 
-.container .board {
-    width: 1200px;
-    height: 1200px;
-    background-color: #eee;
-    border: 10px solid #03a9f4;
-    position: relative;
-    overflow: hidden;
+    .board {
+        min-width: 200px;
+        max-width: 2000px;
+        min-height: 200px;
+        max-height: 2000px;
+        width: 1200px; /* 200px - 2000px */
+        height: 1200px;
+        background-color: #eee;
+        border: 10px solid $mainColor;
+        position: relative;
+        overflow: hidden;
+    }
 }
 /* End Tactics Board */
+
+@import "layout/zoomControls"

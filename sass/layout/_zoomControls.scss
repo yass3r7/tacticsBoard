@@ -1,0 +1,38 @@
+/* Start Zoom Controls */
+.zoom-controls {
+    position: fixed;
+    right: 30px;
+    bottom: 90px;
+
+    button {
+        display: block;
+        padding: 12px;
+        background: #ddd;
+        color: #333;
+        text-align: center;
+        font-size: 1.1rem;
+        outline: none;
+        border: none;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+        &:first-of-type {
+            border-top: 1px solid #333;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+        &:nth-of-type(2) {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        &:last-of-type {
+            border-bottom: 1px solid #333;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+        &:hover {
+            background: #333;
+            color:#ddd;
+        }
+    }
+}
+/* End Zoom Controls */
