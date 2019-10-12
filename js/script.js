@@ -39,10 +39,12 @@ $(function () {
 
     $("#itemProp").click(function () {
         let i_layer = clickedItem.data("layer"),
-            i_color = clickedItem.data("color"),
             i_width = clickedItem.data("width"),
             i_height = clickedItem.data("height"),
-            i_rotate = clickedItem.data("rotate");
+            i_rotate = clickedItem.data("rotate"),
+            i_color = clickedItem.data("color");
+
+            console.log(i_layer);
 
         if (clickedItem.data("type") == "vec") {
             $(".item-options").hide();
@@ -91,6 +93,34 @@ function confirmChanges() {
     $(".item-settings").hide("slow");
     $(".vec-item-settings").addClass("hidden");
     $(".img-item-settings").addClass("hidden");
+
+    if (clickedItem.data("type") == "vec") {
+        clickedItem.data("layer", n_1_layer.value);
+        clickedItem.data("width", n_1_width.value);
+        clickedItem.data("height", n_1_height.value);
+        clickedItem.data("rotate", n_1_rotate.value);
+        clickedItem.data("color", n_1_color.value);
+
+        clickedItem.css({
+            zIndex: n_1_layer.value,
+            width: n_1_width.value + "%",
+            height: n_1_height.value + "%",
+            transform: "rotate(" + n_1_rotate.value + "deg)",
+            background: (n_1_color.value == "c1") ? "#555" : "#fff"
+        });
+    } else if (clickedItem.data("type") == "img") {
+        clickedItem.data("layer", n_2_layer.value);
+        clickedItem.data("width", n_2_width.value);
+        clickedItem.data("height", n_2_height.value);
+        clickedItem.data("rotate", n_2_rotate.value);
+
+        clickedItem.css({
+            zIndex: n_2_layer.value,
+            width: n_2_width.value + "%",
+            height: n_2_height.value + "%",
+            transform: "rotate(" + n_2_rotate.value + "deg)"
+        });
+    }
 }
 
 // cancel changes
