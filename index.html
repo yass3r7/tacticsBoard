@@ -20,7 +20,7 @@
     <!-- Start Tactic Board -->
     <div class="container">
         <div id="board" class="board">
-
+            <div class="component square" data-name="square" data-type="vec"></div>
         </div>
     </div>
     <!-- End Tactic Board -->
@@ -52,6 +52,7 @@
         <!-- Start Add Item menu -->
         <div class="add-item-menu hidden">
             <ul>
+                <!-- <li data-item="text"><i class="fa fa-font"></i> Text</li> -->
                 <li data-item="square"><i class="fa fa-square"></i> Square</li>
                 <li data-item="circle"><i class="fa fa-circle"></i> Circle</li>
                 <li data-item="tree"><i class="fa fa-tree"></i> Tree</li>
@@ -78,8 +79,91 @@
             </div>
         </div>
         <!-- End add item how many -->
+
+        <!-- Start Item options -->
+        <div class="item-options">
+            <ul>
+                <li><i class="fa fa-arrows-alt"></i> Move item</li>
+                <li><i class="fa fa-trash-alt"></i> Remove item</li>
+                <li id="itemProp"><i class="fa fa-tasks"></i> Properties</li>
+            </ul>
+        </div>
+        <!-- End Item options -->
+
+        <!-- Start Item settings -->
+        <div class="item-settings">
+            <div class="vec-item-settings hidden">
+                <div class="alert">
+                    <div class="alert-title">
+                        <h3>Item settings</h3>
+                    </div>
+                    <div class="alert-body">
+                        <div class="group">
+                            <label for="item-color">Layer:</label>
+                            <input type="number" value="0" min="0" max="100" id="n_layer">
+                        </div>
+                        <div class="group">
+                            <label for="item-color">Color:</label>
+                            <select id="">
+                                <option value="c1">1st Color</option>
+                                <option value="c2">2nd Color</option>
+                                <option value="c3">Custom Color</option>
+                            </select>
+                            <span id="colorValue"></span>
+                            <input type="color" name="color" id="n_color" disabled>
+                        </div>
+                        <div class="group">
+                            <label for="item-color">Width (%):</label>
+                            <input type="number" value="10" min="2" max="100" id="n_width"><span></span> (2% ~ 100%)</span>
+                        </div>
+                        <div class="group">
+                            <label for="item-color">Height (%):</label>
+                            <input type="number" value="10" min="2" max="100" id="n_height"><span> (2% ~ 100%)</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="alert-buttons">
+                        <button class="alert-btn-primary" onclick="confirmChanges()">Save</button>
+                        <button class="alert-btn-danger" onclick="cancelChanges()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-item-settings hidden">
+                <div class="alert">
+                    <div class="alert-title">
+                        <h3>Item settings</h3>
+                    </div>
+                    <div class="alert-body">
+                        <div class="group">
+                            <label for="item-color">Layer:</label>
+                            <input type="number" value="0" min="0" max="1000" id="">
+                        </div>
+                        <div class="group">
+                            <label for="item-color">Width (%):</label>
+                            <input type="number" value="10" min="2" max="100" id=""><span></span> (2% ~ 100%)</span>
+                        </div>
+                        <div class="group">
+                            <label for="item-color">Height (%):</label>
+                            <input type="number" value="10" min="2" max="100" id=""><span> (2% ~ 100%)</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="alert-buttons">
+                        <button class="alert-btn-primary" onclick="confirmChanges()">Save</button>
+                        <button class="alert-btn-danger" onclick="cancelChanges()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Item settings -->
     </div>
     <!-- End Controls -->
+
+    <!-- Start Components Provider -->
+    <div class="provider hidden">
+        <div class="component square" data-name="square" data-type="vec" id="" data-layer="1" data-color="c1" data-width="10" data-height="10"></div>
+    </div>
+    <!-- End Components Provider -->
     
     <!-- Start scripts -->
     <script src="js/libraries/jquery-3.3.1.min.js"></script>

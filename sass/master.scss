@@ -54,7 +54,7 @@ ul, ol {
         max-height: 2000px;
         width: 1200px; /* 200px - 2000px */
         height: 1200px;
-        background-color: #eee;
+        background-color: #dedede;
         border: 10px solid $mainColor;
         position: relative;
         overflow: hidden;
@@ -66,7 +66,7 @@ ul, ol {
 @import "layout/zoomControls"; // zoom controls
 @import "layout/menu"; // menu
 
-/* Start custom components */
+/* Start custom elements */
 .add-settings {
     background: #fff;
     position: fixed;
@@ -77,4 +77,68 @@ ul, ol {
 
     @import "layout/alert";
 }
-/* End custom components */
+/* End custom elements */
+
+/* Start item options */
+.item-options {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: none;
+
+    ul {
+        padding: 0;
+        margin: 0;
+    
+        li {
+            min-width: 180px;
+            background: $mainColor;
+            color: #fff;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 15px 10px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            &:first-of-type {
+                border-top: 1px solid #fff;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+            }
+            &:last-of-type {
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+            &:hover {
+                background: $secondColor;
+            }
+
+            i {
+                font-size: 1.6rem;
+                margin: 0 4px;
+            }
+        }
+    }
+}
+/* End item options */
+
+/* Start item settings */
+.item-settings {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    @import "layout/alert";
+}
+/* End item settings */
+
+
+/* Start board components */
+@import "components/square";
+/* End board components */

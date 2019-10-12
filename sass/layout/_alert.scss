@@ -1,6 +1,5 @@
 /* Start alert box */
 .alert {
-    width: 300px;
     padding: 15px 20px;
     background: #fff;
     position: fixed;
@@ -20,6 +19,10 @@
 
     .alert-body {
         color: #666;
+
+        .group {
+            margin: 8px;
+        }
 
         .alert-input {
             display: inline-block;
