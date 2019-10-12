@@ -1,0 +1,64 @@
+//  *
+//  * overlay mixin
+//  * set an overlay on a main elements
+//  *
+@mixin overlay($bgColor: $mainColor, $opacity: 0.5, $index: initial) {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($bgColor, $opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $index;
+}
+
+
+//  *
+//  * setProp mixin for add the vendor prefixes
+//  * set the vendor prefixes automatically
+//  *
+@mixin setProp($prop, $val, $options: (-webkit- -moz- -o- -ms-)) {
+    @each $prefix in $options {
+        #{$prefix + $prop}: $val;
+    }
+    #{$prop}: $val;
+}
+
+
+//  *
+//  * set_kf mixin for support animation with vendors
+//  * set the vendor prefixes automatically for animation keyframe
+//  *
+@mixin set_kf($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+}
+
+// *
+// * opacity mixin for support opacity in es browsers
+// *
+// *
+@mixin setOpacity($val) {
+    $opacityVal: $val * 100;
+
+    zoom: 1;
+    filter: alpha(opacity = $opacityVal);
+    opacity: $val;
+}
+
+// *
+// * animation mixin
+// *
+// *
+@mixin setTransition($args...) {
+    @include setProp(transition, $args);
+}
